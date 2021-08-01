@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        p {
+            border: 1px solid grey;
+            width: 40%;
+            height: 30px;
+            background: rgb(224, 222, 222);
+            text-align: center;
+            margin: auto;
+        }
+
+        button {
+            margin-left: 47%;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 1100px) {
+            p {
+                width: 70%;
+            }
+
+
+        }
+
+        @media (max-width: 800px) {
+            p {
+                width: 90%;
+            }
+
+            button {
+                margin-left: 38%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="goBack()" style="height: 30px; width:  100px;">
+        < Back Home</button>
+
+            <div id="details" style="font-size: 20px;">
+                <p id="name"></p>
+                <p id="birth"></p>
+                <p id="eye"></p>
+                <p id="gender"></p>
+                <p id="hair"></p>
+                <p id="height"></p>
+                <p id="mass"></p>
+                <p id="skin"></p>
+            </div>
+</body>
+
+</html>
+
+<script>
+    const goBack = () => {
+        window.location.href = 'index.html'
+    }
+
+    const appendEle = ({ name, birth_year, eye_color, gender, hair_color, height, mass, skin_color }) => {
+        document.getElementById('name').innerHTML = `name: ${name}`;
+        document.getElementById('birth').innerHTML = `birth year: ${birth_year}`;
+        document.getElementById('eye').innerHTML = `eye color: ${eye_color}`;
+        document.getElementById('gender').innerHTML = `gender: ${gender}`;
+        document.getElementById('hair').innerHTML = `hair color: ${hair_color}`;
+        document.getElementById('height').innerHTML = `height: ${height}`;
+        document.getElementById('mass').innerHTML = `mass: ${mass}`;
+        document.getElementById('skin').innerHTML = `skin color: ${skin_color}`;
+
+
+
+    }
+
+
+    let data = JSON.parse(localStorage.getItem('searchfeed'))
+    let id = localStorage.getItem('searchId')
+
+    data.forEach(element => {
+        if (element.id == id) {
+            appendEle(element)
+        }
+    });
+
+</script>

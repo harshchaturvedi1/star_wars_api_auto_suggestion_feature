@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: rgba(253, 253, 58, 0.719);
+}
+.heading {
+  text-align: center;
+  font-size: 40px;
+}
+.inputText {
+  display: grid;
+  width: 40%;
+  grid-template-columns: 90% 10%;
+  margin: auto;
+  height: 35px;
+  margin-top: 2%;
+  /* border: 1px solid black; */
+}
+input {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 15px;
+  outline: none;
+  background: rgb(233, 230, 230);
+  border-bottom: none;
+}
+.searchbutton {
+  /* border: 1px solid black; */
+  border-radius: 15px;
+  margin-left: 9%;
+  padding: 5%;
+}
+.searchbutton img {
+  border-radius: 15px;
+  width: 100%;
+  height: 50px;
+}
+#beforeFeed,
+#Afterfeed {
+  width: 100%;
+  text-align: right;
+  font-size: 25px;
+  font-weight: 550;
+  margin: auto;
+  margin-top: 4%;
+  border: 3px solid rgb(14, 13, 13);
+  border-top: none;
+  display: none;
+}
+.partone {
+  margin-left: 5px;
+}
+.name {
+  font-size: 25px;
+}
+.birth {
+  font-size: 18px;
+}
+.eachfeed {
+  display: grid;
+  border: 1px solid rgb(209, 208, 208);
+  background: rgb(233, 230, 230);
+  width: 95%;
+  padding: 10px;
+  border-radius: 15px;
+  grid-template-columns: 70% 28%;
+}
+.eachfeed:hover {
+  background: white;
+}
+.gender {
+  text-align: right;
+  font-size: 18px;
+}
+#firstImage {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .inputText {
+    width: 60%;
+  }
+}
+@media (max-width: 800px) {
+  .inputText {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .inputText {
+    width: 90%;
+  }
+}
