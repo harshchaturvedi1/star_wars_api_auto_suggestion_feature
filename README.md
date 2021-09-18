@@ -25,6 +25,5 @@
 ### Details of character clicked
 ![alt text](images/4.png)
 
-![alt text](images/notfound.png)
 
 ### api link > `https://swapi.dev/api/people/?search=<query>
